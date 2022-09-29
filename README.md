@@ -10,5 +10,29 @@ That experiment is a great experiment to test some implementations of ResTemplat
 
 ## Main characteristics
 
-- There is a JMeter archive `\src\test\resources\jmeter\loadTest.jmx` to be used in a load test together with the project [delegate-demo-request]()
+- There is a JMeter archive `\src\test\resources\jmeter\loadTest.jmx` to be used in a load test together with the project [delegate-demo-request](https://github.com/trferreira-BR/delegate-demo-request)
 - There is a configuration in `application.yml` to log org.apache.http with level DEBUG
+
+### Requirements ###
+
+* Java 17
+* Maven 3.3.x
+
+### Building the artifact ###
+
+```
+mvn clean package
+```
+
+### Running the application from command line ###
+
+```
+mvn spring-boot:run -Dserver.port=8900
+```
+
+### Available URLs
+
+```
+http://localhost:8900/delegate/demo
+```
+should result in successful responses.
